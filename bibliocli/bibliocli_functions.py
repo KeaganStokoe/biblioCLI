@@ -28,6 +28,12 @@ def addBookToDatabase(name, author, completed=False):
                     safe=";/?:@&=+$,",
                 )
             },
+            "Download link": {
+                "url": urllib.parse.quote(
+                    f"https://b-ok.africa/s/{name} {author}",
+                    safe=";/?:@&=+$,",
+                )
+            },
             "Completed": {"checkbox": completed},
         },
     }
