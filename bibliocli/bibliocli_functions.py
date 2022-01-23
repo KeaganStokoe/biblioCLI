@@ -49,7 +49,9 @@ def addBookToDatabase(name, author, completed=False):
     )
 
     if response.status_code == 200:
-        click.echo(f'Successfully added "{name}" by "{author}" to the database.')
+        click.echo(
+            f'Successfully added "{name}" by "{author}" to the database. View it at https://www.notion.so/{DATABASE_ID}'
+        )
     else:
         click.echo(f'Failed to add "{name}" by "{author}" to the database.')
         click.echo(f"Here's the error message: {response.json()}")
