@@ -50,7 +50,7 @@ def addBookToDatabase(name, author, completed=False):
 
     if response.status_code == 200:
         click.echo(
-            f'Successfully added "{name}" by "{author}" to the database. View it at https://www.notion.so/{DATABASE_ID}'
+            f'Successfully added "{name}" by "{author}" to the database. \nView database: https://www.notion.so/{DATABASE_ID} \nDownload link: https://b-ok.africa/s/{name} {author}'
         )
     else:
         click.echo(f'Failed to add "{name}" by "{author}" to the database.')
