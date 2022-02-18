@@ -49,8 +49,13 @@ def addBookToDatabase(name, author, completed=False):
     )
 
     if response.status_code == 200:
+        database_link = f"https://www.notion.so/{DATABASE_ID}"
+        download_link = urllib.parse.quote(
+            f"https://b-ok.africa/s/{name} {author}",
+            safe=";/?:@&=+$,",
+        )
         click.echo(
-            f'Successfully added "{name}" by "{author}" to the database. \nView database: https://www.notion.so/{DATABASE_ID} \nDownload link: https://b-ok.africa/s/{name} {author}'
+            f'Successfully added "{name}" by "{author}" to the database. \nView database: {database_link} \nDownload link: {download_link}'
         )
     else:
         click.echo(f'Failed to add "{name}" by "{author}" to the database.')
