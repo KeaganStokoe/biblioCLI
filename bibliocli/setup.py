@@ -4,7 +4,7 @@ from setuptools import setup
 
 setup(
     name="BiblioCLI",
-    version="0.2.1",
+    version="0.2.3",
     description="A command line interface for capturing and storing information about books you want to read",
     url="https://github.com/KeaganStokoe/biblioCLI",
     author="Keagan Stokoe",
